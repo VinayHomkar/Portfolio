@@ -8,13 +8,13 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Bootstrap</li>
-        <li>javaScript</li>
+      <ul className="pl-2 list-disc">
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>PostgreSQL</li>
+        <li>Sequelize</li>
+        <li>JavaScript</li>
         <li>React</li>
-        <li>Next JS</li>
-        <li>Node JS</li>
-        <li>Express JS</li>
       </ul>
     ),
   },
@@ -22,9 +22,9 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Diploma In Mech</li>
-        <li>BCA Bengaluru North University</li>
+      <ul className="pl-2 list-disc">
+        <li>Fullstack Academy of Code</li>
+        <li>University of California, Santa Cruz</li>
       </ul>
     ),
   },
@@ -32,9 +32,9 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>CSS Bootcamp</li>
-        <li>Web Developement</li>
+      <ul className="pl-2 list-disc">
+        <li>AWS Cloud Practitioner</li>
+        <li>Google Professional Cloud Developer</li>
       </ul>
     ),
   },
@@ -52,24 +52,22 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="items-center gap-8 px-4 py-8 md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
-          alt="About"
           width={500}
           height={500}
+          alt="About"
         />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+        <div className="flex flex-col h-full mt-4 text-left md:mt-0">
+          <h2 className="mb-4 text-4xl font-bold text-white">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            voluptatibus quis tempora architecto, molestiae earum deleniti enim
-            laboriosam tenetur. Delectus vero magnam harum dolore inventore id
-            beatae assumenda adipisci, quod libero ex quisquam nulla distinctio
-            incidunt laborum. Veniam perspiciatis doloribus tempore molestias
-            quasi maxime est culpa vel, quae tempora unde autem distinctio at ab
-            suscipit ut illo eos, eum odit velit sapiente, accusantium mollitia
-            iste.
+            I am a full stack web developer with a passion for creating
+            interactive and responsive web applications. I have experience
+            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
+            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
+            looking to expand my knowledge and skill set. I am a team player and
+            I am excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -81,14 +79,14 @@ const AboutSection = () => {
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
-              active={tab === "skills"}
+              active={tab === "education"}
             >
               {" "}
               Education{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
-              active={tab === "skills"}
+              active={tab === "certifications"}
             >
               {" "}
               Certifications{" "}
